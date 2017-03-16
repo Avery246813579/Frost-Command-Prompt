@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link type="text/css" rel="stylesheet" href="../src/FCP.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            min-height: 100% !important;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #E0E0E0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cwrap">
+    <div id="console">
+        <div class="line">
+            Frostbyte Gat-OS [Version 1.0.0]<br>
+            (C) Avery Durrant<br><br>
+            C:\Users\AveryDurrant> knowledge<br>
+            For more knowledge on Avery's knowledge or his projects on an element. Type the command-name into chat or
+            click on it.<br>
+        </div>
+    </div>
+</div>
+
+<script src="../src/Util.js"></script>
+<script src="../src/Command.js"></script>
+<script src="../src/Console.js"></script>
+<script>
+    var Test = new Console('console', [
+        new Command('1', '2')
+    ]);
+</script>
+</body>
+</html>
