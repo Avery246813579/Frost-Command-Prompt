@@ -1,5 +1,5 @@
 const WARNING = "WARNING", INFO = "INFO", ERROR = "ERROR";
-const VERSION = "1.0.0", VERBOSE = true;
+const VERSION = "1.0.0", VERBOSE = false;
 
 function info(message) {
     if (VERBOSE) {

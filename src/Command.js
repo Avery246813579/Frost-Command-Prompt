@@ -5,7 +5,7 @@ if (typeof window.fcp == "undefined") {
 function Command() {
     this.execute = function (parameters) {
         if (typeof this.fun == "function") {
-            this.fun(console, parameters);
+            this.fun(this.console, parameters);
 
             return true;
         }

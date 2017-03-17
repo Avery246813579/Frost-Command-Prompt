@@ -1,18 +1,3 @@
-var COMMANDS = {
-    HTML: {
-        DESCRIPTION: "The best language",
-        TEXT: "Very nice markup"
-    },
-    CSS: {
-        DESCRIPTION: "A lit language",
-        TEXT: "Dogs"
-    },
-    JAVASCRIPT: {
-        DESCRIPTION: "It's alright",
-        TEXT: "Cats"
-    }
-};
-
 if (typeof window.fcp == "undefined") {
     window.fcp = {};
 }
@@ -46,6 +31,7 @@ function Console() {
             return;
         }
 
+        console.dir(commands);
         warning("Error parsing commands");
     };
 
@@ -72,7 +58,7 @@ function Console() {
             this.raw += "'" + this.command.trim() + "' is not recognized as an internal or external command.<br><br>";
         }
 
-        this.raw += 'C:\\Users\\Avery Durrant>';
+        this.raw += this.name;
 
         this.command = "";
         this.fixCursor();
@@ -130,10 +116,16 @@ function Console() {
         }
     };
 
-    (function Constructor(id, commands) {
+    (function Constructor(id, name, commands) {
         if (typeof id == "undefined") {
             error("Could not find console id " + id + "!");
             return;
+        }
+
+        if(typeof name == "undefined"){
+            this.name = "C:\\Frost Command Prompt>";
+        }else{
+            this.name = name;
         }
 
         var self = this;
@@ -142,7 +134,13 @@ function Console() {
         }
 
         this.id = id;
-        this.line = document.getElementById(id).getElementsByClassName('line')[0];
+        this.console = document.getElementById(id);
+        this.line = this.console.getElementsByClassName('line')[0];
+
+        if(this.line == "undefined"){
+            console.createElement('div').classList.add('line');
+        }
+
         this.raw = this.line.innerHTML;
 
         self.init();

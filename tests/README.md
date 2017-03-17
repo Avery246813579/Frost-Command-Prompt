@@ -1,6 +1,3 @@
 # Frost Command Prompt Tests
 
-Coming Soon
-
-## TODO
-- Yes or no commands
+This folder is used to debug code during development! We make it public so people can see the bug testing. 

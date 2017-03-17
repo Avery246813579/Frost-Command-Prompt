@@ -2,11 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Frost Command Prompt</title>
+    <title>Basic Command Prompt</title>
+
+    <link type="text/css" rel="stylesheet" href="../dist/FCP.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            min-height: 100% !important;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            background-color: #E0E0E0;
+        }
+
+        #wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        #console {
+            width: 90% !important;
+            height: 95% !important;
+        }
+    </style>
 </head>
 <body>
 
-Website Coming Soon!
+<div id="wrapper">
+    <div id="console">
+        <div class="line">
+            Frost Command Prompt [Version 1.0.0]<br>The following are the commands you can use<br><br>
+        </div>
+    </div>
+</div>
 
+<script src="../dist/FCP.min.js"></script>
+<script>
+    var CONSOLE = new Console('console', 'C:\\Users\\Test Prompt>', [
+        new Command('INFO', 'Information on the project', function (console) {
+            window.open( '', '_blank' ).location = "https://github.com/Avery246813579/Frost-Command-Prompt/blob/master/README.md";
+            console.sendLine("Info page was opened");
+        }),
+        new Command('DOWNLOAD', "Forwards you to the download page", function (console) {
+            window.open( '', '_blank' ).location = "https://github.com/Avery246813579/Frost-Command-Prompt/releases";
+            console.sendLine("Download page was opened");
+        }),
+        new Command('AUTHOR', "Details about the author", function (console) {
+            console.sendLine("Avery Durrant wrote this project. You can email him at avery@frostbyte.co");
+        })
+    ]);
+
+    CONSOLE.addCommand(new Command('KAPPA123', 'A secret command', function(){
+        document.body.innerHTML = ":D";
+    }));
+</script>
 </body>
 </html>

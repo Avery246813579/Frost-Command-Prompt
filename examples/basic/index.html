@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Basic Command Prompt</title>
 
-    <link type="text/css" rel="stylesheet" href="../src/FCP.css">
+    <link type="text/css" rel="stylesheet" href="../../dist/FCP.min.css">
     <style>
         * {
             padding: 0;
@@ -13,21 +13,20 @@
 
         html, body {
             min-height: 100% !important;
+            overflow: hidden;
             height: 100%;
-            overflow-x: hidden;
-            overflow-y: hidden;
         }
 
         body {
             background-color: #E0E0E0;
         }
 
-        #cwrap{
+        #wrapper {
             width: 100%;
             height: 100%;
         }
 
-        #console{
+        #console {
             width: 90% !important;
             height: 95% !important;
         }
@@ -35,25 +34,22 @@
 </head>
 <body>
 
-<div id="cwrap">
+<div id="wrapper">
     <div id="console">
         <div class="line">
-            Frostbyte Gat-OS [Version 1.0.0]<br><br>Command Prompt Commands:<br>
+            Frost Command Prompt [Version 1.0.0]<br><br>Test Prompt Commands:<br>
         </div>
     </div>
 </div>
 
-<script src="../src/Util.js"></script>
-<script src="../src/Command.js"></script>
-<script src="../src/Console.js"></script>
+<script src="../../dist/FCP.min.js"></script>
 <script>
     var Test = new Console('console', 'C:\\Users\\Test Prompt>', [
-        new Command('1', '2', function (console) {
-            console.sendLine('Test My Cats');
+        new Command('TEST_COMMAND', 'Does stuff', function (console) {
+            console.sendLine('Test 123');
         }),
-        new Command('STEVE', "GETS STEVEN", function (console) {
-            console.sendLine('Alerting');
-            alert('TEST');
+        new Command('DOGS', "GETS A DOG", function (console) {
+            console.sendLine('DOG');
         })
     ]);
 </script>
