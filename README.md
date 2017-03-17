@@ -23,7 +23,7 @@ To create a fake command prompt, we first have to add the html for it.
         Frost Command Prompt [Version 1.0.0]<br><br>Command Prompt Commands:<br>
     </div>
 </div>
-```
+``` 
 
 After we have the html, we can initialize the console. You need to do this in a script tag after you call the FrostCommandPrompt.min.js script.
 ```
