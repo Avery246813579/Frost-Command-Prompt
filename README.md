@@ -48,14 +48,4 @@ If you don't want the console to display the command descriptions on the page lo
 If you want more help, visit the [example page](examples/README.md). 
 
 ## Todo
-- Yes or No commands
-- Clearing console
-- Command Arguments
-- Holding the next command input
-- Change not found command
-- Saving past commands in localStorage
-- Stop HTML injection
-- Have live examples for the examples
-- Add command aliases 
-- Check for errors while executing commands and don't crash the project if there is an error.
-- Make a trello
+https://trello.com/b/N7qLkf5U/frost-command-prompt
