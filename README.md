@@ -56,3 +56,4 @@ If you want more help, visit the [example page](examples/README.md).
 - Saving past commands in localStorage
 - Stop HTML injection
 - Have live examples for the examples
+- Add command aliases 
