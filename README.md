@@ -51,8 +51,8 @@ If you want more help, visit the [example page](examples/README.md).
 - Yes or No commands
 - Clearing console
 - Command Arguments
-- Send Description Command
 - Holding the next command input
 - Change not found command
 - Saving past commands in localStorage
 - Stop HTML injection
+- Have live examples for the examples

@@ -71,11 +71,7 @@ function Console() {
     };
 
     this.init = function() {
-        for (var key in this.commands) {
-            if (this.commands.hasOwnProperty(key)) {
-                this.raw += key + getSpaces(20 - key.length) + this.commands[key].getDescription() + "<br>";
-            }
-        }
+        this.sendDescription();
 
         var self = this;
         setInterval(function(){
@@ -105,6 +101,14 @@ function Console() {
 
         this.parseCommand();
     };
+
+    this.sendDescription = function(){
+        for (var key in this.commands) {
+            if (this.commands.hasOwnProperty(key)) {
+                this.raw += key + getSpaces(20 - key.length) + this.commands[key].getDescription() + "<br>";
+            }
+        }
+    }
 
     this.fixCursor = function() {
         if (this.cursing) {
