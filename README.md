@@ -22,8 +22,12 @@ To create a fake command prompt, we first have to add the html for it.
     <div class="line">
         Frost Command Prompt [Version 1.0.0]<br><br>Command Prompt Commands:<br>
     </div>
+    
+    <input type="text" id="INPUT" style="width: 100%; height: 1px; position: absolute; top: -10px;">
 </div>
 ```
+
+Note: We need this input for mobile. This is the only work around to get the keyboard working. 
 
 After we have the html, we can initialize the console. You need to do this in a script tag after you call the FrostCommandPrompt.min.js script.
 ```
