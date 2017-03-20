@@ -57,3 +57,5 @@ If you want more help, visit the [example page](examples/README.md).
 - Stop HTML injection
 - Have live examples for the examples
 - Add command aliases 
+- Check for errors while executing commands and don't crash the project if there is an error.
+- Make a trello
